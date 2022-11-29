@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    properties:
+      jdbc:
+        lob:
+          non_contextual_creation: true
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: ${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/csv_rest_db}
+    username: ${JDBC_DATABASE_USERNAME:postgres}
+    password: ${JDBC_DATABASE_PASSWORD:pass}
